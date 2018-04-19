@@ -34,7 +34,7 @@
 
 #pragma mark -- 发送崩溃日志
 - (void)sendExceptionLogWithData:(NSData *)data path:(NSString *)path {
-    
+    //第一种直接发送给服务器
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     manager.requestSerializer.timeoutInterval = 5.0f;
     //告诉AFN，支持接受 text/xml 的数据
@@ -52,6 +52,8 @@
         
         
     }];
+    
+    //第二种通过邮件发送
     
 }
 
